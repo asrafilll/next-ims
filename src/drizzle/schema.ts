@@ -34,11 +34,17 @@ export const user_logs = pgTable('user_logs', {
   note: varchar('note', { length: 255 }).notNull(),
 });
 
+export const master_data = pgTable('master_data', {
+  id: uuid('id').primaryKey(),
+  data : json('data').notNull(),
+  created_at: timestamp('created_at').notNull().defaultNow(),  
+});
+
+export type MasterData = InferSelectModel<typeof master_data>;
+export type NewMasterData = InferInsertModel<typeof master_data>;
+
 export type UserLog = InferSelectModel <typeof user_logs>
 export type NewUserLog = InferInsertModel <typeof user_logs>
-
-  
-  
   
 export type User = InferSelectModel<typeof users>;
 export type NewUser = InferInsertModel<typeof users>;
