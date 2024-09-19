@@ -4,10 +4,10 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const APP_NAME = "NCI WMS";
-const APP_DEFAULT_TITLE = "NCI WMS";
-const APP_TITLE_TEMPLATE = "%s - NCI WMS";
-const APP_DESCRIPTION = "Application Warehouse Management System";
+const APP_NAME = "Pixelcraft - OMS";
+const APP_DEFAULT_TITLE = "Pixelcraft - OMS";
+const APP_TITLE_TEMPLATE = "%s - OMS";
+const APP_DESCRIPTION = "Order Management System";
 
 export const metadata: Metadata = {
   applicationName: APP_NAME,
